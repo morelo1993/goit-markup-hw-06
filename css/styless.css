@@ -137,6 +137,77 @@ address {
 color: var(--one-color-);
 }
 
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-cont{
+    width: 528px;
+    height: 581px;
+    max-height: 80vh;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    border-radius: 4px;
+    position: relative;
+}
+
+.c-btn{
+    font-size: 28px;
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.c-btn:hover{
+    transform: scale(1.2);
+}
+
+[data-modal] {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-modal].is-hidden {
+    display: none;
+}
+/* END HEADER */
+
 
 /* CONTACTS */
 
@@ -155,66 +226,66 @@ color: var(--one-color-);
     display: flex;
 }
 .number{
-  height: 16px;
+    height: 16px;
     width: 118px;
     left: 1263px;
     top: 32px;
     text-decoration: none;
 
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      color: #757575;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #757575;
 }
 
 .contactos:hover,
 .contactos:focus {
-  color: var(--one-color-);
+    color: var(--one-color-);
 }
 
 
 /*titulo*/
 .test-h1 {
-  color: var(--tree-color);
-  font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 60px;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  width: 696px;
-  height: 120px;
-  margin-bottom: 30px;
-  align-content: center;
+    color: var(--tree-color);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    width: 696px;
+    height: 120px;
+    margin-bottom: 30px;
+    align-content: center;
 }
 .fondo-h1 {
-  color: var(--color-fondo);
-  background-image: url(../img/img-section.png);
-  height: 600px;
-  font-weight: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 32px;
+    color: var(--color-fondo);
+    background-image: url(../img/img-section.png);
+    height: 600px;
+    font-weight: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
 }
 .button-h1 {
-  color: var(--tree-color);
-  background-color: var(--one-color-); 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  cursor: pointer; 
-  border: none; 
-  background: #2196F3;
+    color: var(--tree-color);
+    background-color: var(--one-color-); 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer; 
+    border: none; 
+    background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     display: flex;
@@ -223,14 +294,20 @@ color: var(--one-color-);
     padding: 10px 32px;
 }
 .botones-1{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin-top: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .botones{
-  margin-left: 10px;
+    margin-left: 10px;
+}
+
+.botones:hover{
+    box-shadow: 0px 2px 2px 0px #0000001F;
+    box-shadow: 0px 1px 2px 0px #00000014;
+    box-shadow: 0px 3px 1px 0px #0000001A;
 }
 
 .subtitulo1 {
@@ -312,6 +389,10 @@ color: var(--one-color-);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.list-cr:hover{
+    border: 1px solid #2196F3;
 }
 
 .list-cr img{
@@ -421,9 +502,6 @@ color: var(--one-color-);
     border-radius: 0px;
     color: var(--colorPortafolio);
     display: flex;
-
-    left: calc(50% - 370px/2);
-    top: calc(50% - 294px/2 - 519px);
 }
 
 .error-img{
@@ -461,6 +539,41 @@ color: var(--one-color-);
     text-decoration: none;
     flex-basis: calc((100% - 60px) /3);
     cursor: pointer;
+
+    position: relative;
+}
+
+.list-port:hover{
+    transform: translateY(-5px);
+}
+
+.overlay  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 294px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: #2196F3E5;
+}
+
+.list-port:hover .overlay{
+    opacity: 0.8;
+}
+
+.p-overlay{
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        height: 294px;
+        width: 100%;
+        margin: 0;
+        padding: 30px;
 }
 
 .list-port:hover{

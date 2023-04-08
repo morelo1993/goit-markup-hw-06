@@ -40,9 +40,17 @@
     <main>
       <section class="fondo-h1">
         <h1 class="test-h1">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-        <button class="button-h1" type="button">
+        <button class="button-h1" type="button" data-modal-open>
           solicite nuestro servicio
         </button>
+
+        <div class="modal is-hidden" data-modal>
+          <div class="modal-cont">
+            <button data-modal-close class="c-btn">&Chi;</button>
+            <p><p>
+          </div>
+        </div>
+
       </section>
 
       <section class="container">
@@ -218,5 +226,6 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
