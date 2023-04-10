@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -21,6 +21,10 @@ body {
     color: var(--secundary-color);
     background-color: var(#ffffff);
     letter-spacing: 0.03em;
+}
+
+svg {
+    fill: currentColor;
 }
 
 ul{
@@ -221,23 +225,20 @@ color: var(--one-color-);
     gap: 50px;
 }
 
-.correo{
+.ico-nav {
+    color: #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ico-nav>svg {
+    margin-right: 10px;
+}
+
+.ico-nav:hover {
     color: #2196F3;
     display: flex;
-}
-.number{
-    height: 16px;
-    width: 118px;
-    left: 1263px;
-    top: 32px;
-    text-decoration: none;
-
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        text-align: left;
-        color: #757575;
 }
 
 .contactos:hover,
@@ -261,11 +262,12 @@ color: var(--one-color-);
     margin-bottom: 30px;
     align-content: center;
 }
+
 .fondo-h1 {
     color: var(--color-fondo);
-    background-image: url(../img/img-section.png);
+    background-image: linear-gradient(#2F303A66, #2F303A66), url(../img/img-section.png);
     height: 600px;
-    font-weight: 900px;
+    font-weight: 900;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -358,6 +360,7 @@ color: var(--one-color-);
     font-size: 16px;
     line-height: 1.5;
 }
+
 .p-h3 {
     color: var(--four-color);
     font-style: normal;
@@ -366,16 +369,33 @@ color: var(--one-color-);
     line-height: 1.5;
 }
 
-.iconos-equipo{
+.iconos-equipo {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.iconos-items {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #AFB1B8;
+    border-radius: 50%;
+}
+
+.iconos-items:hover {
+    color: var(--colorPortafolio);
+    cursor: pointer;
+    background-color: var(--one-color-);
+    border-radius: 50%;
 }
 
 /*FIN SECCION NUESTRO EQUIPO*/
 
 
 /*SECCION CLIENTES REGULARES*/
-
 .color-cr {
     background: #fff;
     height: 400px;
@@ -389,10 +409,12 @@ color: var(--one-color-);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #AFB1B8;
 }
 
 .list-cr:hover{
     border: 1px solid #2196F3;
+    color: #2196F3;
 }
 
 .list-cr img{
@@ -405,6 +427,11 @@ color: var(--one-color-);
     display: flex;
     justify-content: space-between;
     width: 1170px;
+}
+
+.iconos-re {
+    width: 106px;
+    height: 60px;
 }
 
 /*END SECCION CLIENTES REGULARES*/
@@ -586,6 +613,8 @@ color: var(--one-color-);
 }
 /*END PORTAFOLIO*/
 
+
+
 .botones-list{
     list-style-type: none;
     display: flex;
@@ -616,11 +645,17 @@ color: var(--one-color-);
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: 18px;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 700;
     text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 16.41px;
 }
 
 .son-list{
@@ -641,7 +676,7 @@ color: var(--one-color-);
     display: flex;
 }
 
-.footer > div{
+.footer>div {
     height: 252px;
     display: flex;
     background: #2F303A;
@@ -650,15 +685,15 @@ color: var(--one-color-);
     flex-flow: row wrap;
 }
 
-.left-f{
+.left-f {
     flex: 0 270px;
 }
 
-.center-f{
+.center-f {
     flex: 1 1 auto;
 }
 
-.right-f{
+.right-f {
     flex: 1 1 auto;
 }
 
@@ -676,29 +711,42 @@ color: var(--one-color-);
     color: #fff;
 }
 
-.info-pie-f{
+.info-pie-f {
     color: #FFFFFF99;
 }
 
-.redes-f{
-    width: 206px;
-    height: 44px;
+.redes-f {
+    width: 204px;
+    height: 48px;
     display: flex;
     justify-content: space-between;
+    background-color: transparent;
 }
 
-.redes-f img {
+.iconos-ft {
     width: 44px;
     height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #FFFFFF1A;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.p-f{
+.iconos-ft:hover {
+    background-color: #2196F3;
+}
+
+.p-f {
     color: var(--colorPortafolio);
     font-family: Roboto;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16px;
-        letter-spacing: 0.03em;
-        text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-align: left;
 }
+
 /*END FOOTER*/
