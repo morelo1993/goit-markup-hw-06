@@ -1,3 +1,3 @@
-### enlace de la tarea 5
+### enlace de la tarea 6
 
-https://morelo1993.github.io/goit-markup-hw-05/
+https://morelo1993.github.io/goit-markup-hw-06/
