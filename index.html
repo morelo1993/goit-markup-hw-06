@@ -18,12 +18,12 @@
             <a href="#" class="logo"><span class="span-logo">WebStudio</span></a>
             <ul class="header-menu">
                 <li>
-                    <a class="header-post current" href="./index.html">Estudio <i class="line-blue"></i></a>
+                    <a class="header-post current" href="./index.html">Estudio </a>
                 </li>
                 <li>
-                    <a class="header-post " href="./portafolio.html">Portafolio <i class="line-blue"></i></a>
+                    <a class="header-post " href="./portafolio.html">Portafolio </a>
                 </li>
-                <li><a class="header-post" href="">Contactos <i class="line-blue"></i></a></li>
+                <li><a class="header-post" href="">Contactos </a></li>
             </ul>
         </nav>
         <ul class="contact">
@@ -52,7 +52,9 @@
         <div class="modal is-hidden" data-modal>
           <div class="modal-cont">
             <button data-modal-close class="c-btn">&Chi;</button>
-                <form>
+                <form action="" method="POST">
+                  <h1>Deje sus datos, nos contactaremos con usted</h1>
+                  <br>
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <div class="input-group">
@@ -61,7 +63,7 @@
                                     <use xlink:href="img/ico-form.svg#icon-persona-negra-18dp-1"></use>
                                 </svg>
                             </span>
-                            <input type="text" id="nombre" name="nombre" class="form-control" style="width: 448px; height: 40px;" />
+                            <input type="text" id="nombre" name="nombre" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -72,7 +74,7 @@
                                     <use xlink:href="img/ico-form.svg#icon-telfono-negro-18dp-1"></use>
                                 </svg>
                             </span>
-                            <input type="text" id="telefono" name="telefono" class="form-control" style="width: 448px; height: 40px;" />
+                            <input type="text" id="telefono" name="telefono" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -83,19 +85,18 @@
                                     <use xlink:href="img/ico-form.svg#icon-correo-electrnico-negro-18dp-1"></use>
                                 </svg>
                             </span>
-                            <input type="email" id="email" name="email" class="form-control" style="width: 448px; height: 40px;" />
+                            <input type="email" id="email" name="email" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="comentarios">Comentarios:</label>
                         <div class="input-group">
-                            <textarea id="comentarios" name="comentarios" class="form-control"
-                                style="width: 448px; height: 80px;"></textarea>
+                            <textarea id="comentarios" name="comentarios" class="text-area"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="checkbox" id="aceptar" name="aceptar" style="width: 16px; height: 15px;margin-right: 4px;"/>
+                            <input type="checkbox" id="aceptar" name="aceptar" class="checkbox"/>
                             <label for="aceptar">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</label>
                         </div>
                     </div>

@@ -126,13 +126,14 @@ address {
     color: var(--secundary-color);
     font-size: 16px;
     letter-spacing: 0.02em;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-post:hover,
 .header-post:focus {
     color: var(--one-color-);
     border-bottom: 4px solid var(--one-color-);
-    transition: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-bottom: 26px;
     border-radius: 2px;
 }
@@ -172,7 +173,7 @@ address {
     height: 581px;
     max-height: 80vh;
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     overflow: auto;
     border-radius: 4px;
@@ -217,16 +218,19 @@ address {
 
 .form-group {
     margin-bottom: 20px;
+    max-width: 448px;
 }
 
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    max-width: 448px;
 }
 
 .input-group {
     display: flex;
+    outline: none;
 }
 
 .input-group-icon {
@@ -240,8 +244,20 @@ address {
     height: 20px;
 }
 
+.input-group:focus-within > .input-group-icon {
+    color: var(--one-color-);
+}
+
+form{
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-control {
-    width: 448px;
+    width: 407px;
     height: 40px;
     padding-left: 40px;
     /* para dar espacio al ícono */
@@ -250,6 +266,11 @@ address {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-size: 16px;
     line-height: 1.5;
+}
+
+.form-control:focus-visible{
+    outline: none;
+    border: 1px solid var(--one-color-);
 }
 
 textarea.form-control {
@@ -261,7 +282,26 @@ textarea.form-control {
     fill: #ccc;
 }
 .btn-m{
-    margin-left: 150px;
+    
+}
+
+.text-area{
+    width: 427px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 10px;
+    outline: none;
+}
+
+.text-area:focus-visible{
+    border: 1px solid var(--one-color-);
+}
+
+.checkbox{
+    width: 16px;
+    height: 15px;
+    border: 0.2px solid rgba(255, 255, 255, 1);
+    margin-right: 7px;
 }
 /* END MODAL */
 
@@ -288,6 +328,7 @@ textarea.form-control {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ico-nav>svg {
@@ -345,14 +386,16 @@ textarea.form-control {
     letter-spacing: 0.06em;
     cursor: pointer; 
     border: none; 
-    background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     padding: 10px 32px;
 }
+
+.button-h1:focus-visible{
+    outline: none;
+}
+
 .botones-1{
     display: flex;
     flex-flow: row nowrap;
@@ -441,6 +484,7 @@ textarea.form-control {
     align-items: center;
     color: #AFB1B8;
     border-radius: 50%;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .iconos-items:hover {
@@ -468,11 +512,13 @@ textarea.form-control {
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-cr:hover{
     border: 1px solid #2196F3;
     color: #2196F3;
+    
 }
 
 .list-cr img{
@@ -497,39 +543,40 @@ textarea.form-control {
 /*pg*/
 
 .botones {
-  color: var(--secundary-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  border: none;
-  padding: 6px 24px;
-  border-radius: 5px;
+    color: var(--secundary-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    border: none;
+    padding: 6px 24px;
+    border-radius: 5px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .botones:hover {
-  color: var(--tree-color);
-  background-color: var(--one-color-);
-  cursor: pointer;
+    color: var(--tree-color);
+    background-color: var(--one-color-);
+    cursor: pointer;
 }
 .botones:focus {
-  color: var(--tree-color);
-  background-color: var(--one-color-);
+    color: var(--tree-color);
+    background-color: var(--one-color-);
 }
 
 .subtittle {
-  color: var(--secundary-color);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 36px;
+    color: var(--secundary-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
 }
 
 .paragraph {
-  color: var(--four-color);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+    color: var(--four-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .titulos{
@@ -791,6 +838,7 @@ textarea.form-control {
     background: #FFFFFF1A;
     border-radius: 50%;
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .iconos-ft:hover {
